@@ -1,4 +1,17 @@
-*Инструкция по воспроизведению автотестов*: 
+# Инструкция по получению новых скриншотов папки output:
+1. Клонируем проект командой ``git clone https://github.com/albiRADA/QA_avito_test.git``
+2. Устанавливаем необходимое ПО:
+
+   2.1. python: можно уставновить с официального сайта : <https://www.python.org/downloads/>
+
+   2.2. Установка pytest: <https://docs.pytest.org/en/latest/getting-started.html#install-pytest>
+
+   2.3. Далее так же устанавливаем playwright: <https://playwright.dev/python/docs/intro>
+
+3. В папке проекта в консоли выполнить команду ``pytest``
+
+   
+# Инструкция по написанию автотестов: 
 (P.S. Для каждого счетчика я создавала отдельную группу тестов)
 
 1. Для написания тестов нам понадобится утилиты python, pytest, playwright:
@@ -14,7 +27,7 @@
 3. Создаем файл в локальной дириктории формата test_*.py (для pytest это файлы с тестами) 
 4. Тесты для всех тест кейсов создаем аналогично:
 
-``````puthon
+```python
 import pytest 
 import re 
 
@@ -55,7 +68,7 @@ def test_waterCounter_1(page: Page): # Названия функций и пер
     
     waterCounter.screenshot(path="output/1.png") #Делаем скриншот и сохраняем например в папку output (в нужное нам место)
 
-``````
+```
 
 5. Для запуска теста, сохраняем файл и в терминале vs code пишем: pytest test_*.py (название файла)
 6. Cкриншот будет в папке output!
